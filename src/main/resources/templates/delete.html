@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
+<nav th:replace = "fragments :: navigation"></nav>
+
+<form method = "post">
+
+    <th:block th:each="entry : ${entries}">
+        <div class="form-group">
+            <label>
+                <span th:text="${entry.today}"></span>
+                <input type="checkbox" name="entryIds" th:value="${entry.id}" class="form-check-input">
+            </label>
+        </div>
+    </th:block>
+
+    <input type="submit" value="Delete" class="btn btn-danger">
+</form>
+</body>
+<footer th:replace = "fragments :: footer"></footer>
+</html>

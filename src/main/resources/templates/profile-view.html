@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body class="container">
+<nav th:replace="fragments :: navigation"></nav>
+<h2 th:replace="fragments :: title"></h2>
+
+<table class="table table-bordered border-info">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>Activity Level</th>
+        <th>Energy Level</th>
+    </tr>
+    </thead>
+    <tr th:each="profileDetail : ${profileDetails}">
+        <td th:text="${profileDetail.name}"></td>
+        <td th:text="${profileDetail.age}"></td>
+        <td th:text="${profileDetail.weight}"></td>
+        <td th:text="${profileDetail.activityLevel}"></td>
+        <td th:text="${profileDetail.energyLevel}"></td>
+    </tr>
+</table>
+</body>
+<footer th:replace="fragments :: footer"></footer>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <!--    <link rel="stylesheet" th:href="@{/styles.css}">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body class="container" style="font-family: 'Montserrat', sans-serif; background: #f5f5f5;">
+<nav style="padding-bottom: 40px;">
+    <h1 style="font-weight: bold; display: inline-block; padding: 30px;">Feel</h1>
+    <ul style="display: inline-flex; float: right; padding: 50px;">
+        <li class="nav-item" style="padding-right: 20px; list-style-type: none;"><a class="nav-link" href="/">Home </a></li>
+        <li class="nav-item" style="padding-right: 20px"><a class="nav-link" href="/register">Register User </a></li>
+        <li class="nav-item" style="padding-right: 20px"><a class="nav-link" href="/login">User Login </a></li>
+        <li class="nav-item" style="padding-right: 20px"><a class="nav-link" href="/logout">Logout </a></li>
+    </ul>
+</nav>
+<main id="login-holder">
+    <q style="font-size: x-large; text-align: center;">In time and with water, everything changes.</q><p> -Leonardo da Vinci</p>
+    <h3 id="login-header-second">Login to start tracking your mood</h3>
+    <form method="post" id="login-form" style="margin-top: 40px;">
+        <div class="form-group row">
+            <lable class="col-sm-2 col-form-label">Username</lable>
+            <div class="col-sm-10">
+                <input type="text" id="username" class="login-username-field" placeholder="enter username" th:field="${loginFormDTO.username}">
+            </div>
+            <p class="error" th:errors="${loginFormDTO.username}"></p>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" id="password" class="login-password-field" placeholder="enter password" th:field="${loginFormDTO.password}">
+            </div>
+            <p class="error" th:error="${loginFormDTO.password}"></p>
+        </div>
+        <input type="submit" value="Login" id="login">
+    </form>
+
+    <p type="button" id="sign-up">New users<a href="/register"> Register here</a></p>
+</main>
+</body>
+<footer style="width: 100%; display: grid;
+    grid-template-columns: auto auto auto; position: absolute; padding: 60px; background: #3785B9; bottom: 0; left: 0; ">
+    <div class="footer-item">
+        <h5><a style="color: white;" href="/contact">Contact Us</a></h5>
+    </div>
+    <div class="footer-item">
+        <h5><a style="color: white;" href="/about">About Us</a></h5>
+    </div>
+    <div>
+        <h5><a style="color: white;" href="/resources">Resources</a></h5>
+    </div>
+</footer>
+</html>

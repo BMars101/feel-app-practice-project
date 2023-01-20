@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body class="container">
+<nav th:replace="fragments :: navigation"></nav>
+<h2 th:replace="fragments :: title"></h2>
+<form class="form-horizontal" method="post" action="/allEntries">
+    <label>Enter water intake for today: </label>
+    <input class="form-control" type="text" name="dailyWaterLog">
+    <label>How are you feeling today? </label>
+    <input class="form-control" type="text" name="mood">
+    <label>Tell me more: </label>
+    <textarea class="form-control" name="detailedEntry"></textarea>
+    <input type="submit" value="Add Entry">
+</form>
+
+</body>
+<footer th:replace="fragments :: footer"></footer>
+</html>

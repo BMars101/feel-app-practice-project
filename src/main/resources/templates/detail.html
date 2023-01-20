@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body class="container">
+<nav th:replace="fragments :: navigation"></nav>
+<h2 th:replace = "fragments :: title"></h2>
+<table class="table table-striped">
+        <tr>
+            <th>Entry Date</th>
+            <td th:text="${entry.today}"></td>
+        </tr>
+        <tr>
+            <th>Water Intake</th>
+            <td th:text="${entry.dailyWaterLog}"></td>
+        </tr>
+        <tr>
+            <th>Mood</th>
+            <td th:text="${entry.mood}"></td>
+        </tr>
+        <tr>
+            <th>Detailed Entry</th>
+            <td th:text="${entry.detailedEntry}"></td>
+        </tr>
+</table>
+</body>
+<footer th:replace="fragments :: footer"></footer>
+</html>

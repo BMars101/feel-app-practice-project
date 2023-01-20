@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body class="container">
+<nav th:replace="fragments :: navigation"></nav>
+<h2 th:replace="fragments :: title"></h2>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Entry Date</th>
+    </tr>
+    </thead>
+    <tr th:each="entry : ${entries}">
+        <td ><a class="detail-link" th:href="'/detail?entryId= ' + ${entry.id}" th:text="${entry.today}"></a></td>
+    </tr>
+</table>
+<a href="/delete">Delete An Entry</a>
+</body>
+<footer th:replace="fragments :: footer"></footer>
+</html>

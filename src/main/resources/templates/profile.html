@@ -1,0 +1,54 @@
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body class="container">
+<nav th:replace="fragments :: navigation"></nav>
+<h2 th:replace="fragments :: title"></h2>
+<form class="profile" method="post" action="/profile-view">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Name</label>
+                <input type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Age</label>
+                <input type="text" class="form-control" name="age">
+        </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Weight</label>
+            <input type="text" class="form-control" name="weight">
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Activity Level
+            <select name="activityLevel">
+                <option th:value="Lightly">Lightly active</option>
+                <option th:value="Moderately">Moderately active</option>
+                <option th:value="Highly">Highly active</option>
+            </select>
+        </label>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Energy Level
+        <select name="energyLevel">
+            <option th:value="Low">Low</option>
+            <option th:value="Baseline">Baseline</option>
+            <option th:value="High">High</option>
+        </select>
+        </label>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Emotional Goal</label>
+            <input type="text" class="form-control" name="emotionalGoals">
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Lifestyle Goal</label>
+            <input type="text" class="form-control" name="lifeImprovement">
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Secret Goal</label>
+            <input type="text" class="form-control" name="secretGoal">
+    </div>
+    <input type="submit" value="Submit">
+</form>
+</body>
+<footer th:replace="fragments :: footer"></footer>
+</html>
