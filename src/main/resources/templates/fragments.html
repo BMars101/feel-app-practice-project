@@ -13,10 +13,9 @@
     <h1>Feel</h1>
     <ul>
         <li class="nav-item-1"><a class="nav-link" href="/"> Home</a></li>
-<!--        <li class="nav-item-1"><a class="nav-link" href="/login">Login</a></li>-->
-        <li class="nav-item"><a class="nav-link" href="/allEntries">All Entries</a></li>
-        <li class="nav-item"><a class="nav-link" href="/addEntry">Add Entry</a></li>
-        <li class="nav-item"><a class="nav-link" href="/logout">Log out</a></li>
+        <li class="nav-item"><a class="nav-link" href="/entries/allEntries">All Entries</a></li>
+        <li class="nav-item"><a class="nav-link" href="/entries/addEntry">Add Entry</a></li>
+        <li class="nav-item"><a class="nav-link" href="/entries/logout">Log out</a></li>
     </ul>
 </nav>
 <h2 th:fragment = "title" th:text="${title}"></h2>
@@ -25,13 +24,13 @@
 <footer th:fragment = "footer" class="footer" style="display: grid;
     grid-template-columns: auto auto auto;">
     <div class="footer-item">
-        <h5><a class="footer-link" href="/contact">Contact Us</a></h5>
+        <h5><a class="footer-link" href="/links/contact">Contact Us</a></h5>
     </div>
     <div class="footer-item">
-        <h5><a class="footer-link" href="/about">About Us</a></h5>
+        <h5><a class="footer-link" href="/links/about">About Us</a></h5>
     </div>
     <div>
-        <h5><a class="footer-link" href="/resources">Resources</a></h5>
+        <h5><a class="footer-link" href="/links/resources">Resources</a></h5>
     </div>
 </footer>
 </html>

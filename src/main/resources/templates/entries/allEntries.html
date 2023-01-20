@@ -12,7 +12,7 @@
     </tr>
     </thead>
     <tr th:each="entry : ${entries}">
-        <td ><a class="detail-link" th:href="'/detail?entryId= ' + ${entry.id}" th:text="${entry.today}"></a></td>
+        <td ><a class="detail-link" th:href="'/entries/detail?entryId= ' + ${entry.id}" th:text="${entry.today}"></a></td>
     </tr>
 </table>
 <a href="/delete">Delete An Entry</a>

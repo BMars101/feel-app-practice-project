@@ -29,8 +29,6 @@ public class HomePageController {
     @Autowired
     private AuthenticationController authenticationController;
 
-
-    //@RequestParam(required = false) String username,
     @GetMapping("")
     public String displayHomePage(HttpServletRequest request, Model model){
         HttpSession session = request.getSession();
@@ -38,12 +36,12 @@ public class HomePageController {
         model.addAttribute("username", "Hi " + user.getUsername() + "!");
         return "index";
     }
-    @GetMapping("allEntries")
+    @GetMapping("/entries/allEntries")
     public String displayHomeEntries(Model model){
         model.addAttribute("entries", journalEntryRepository.findAll());
-        return "allEntries";
+        return "/entries/allEntries";
     }
-    @GetMapping("detail")
+    @GetMapping("/entries/detail")
     public String displayEntryDetails(@RequestParam Integer entryId, Model model){
         Optional<JournalEntry> result = journalEntryRepository.findById(entryId);
         if(result.isEmpty()){
@@ -54,7 +52,6 @@ public class HomePageController {
             model.addAttribute("entry", entry);
         }
 
-//        model.addAttribute("entries", journalEntryRepository.findAll());
-        return "detail";
+        return "/entries/detail";
     }
 }

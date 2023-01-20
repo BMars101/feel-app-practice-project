@@ -15,26 +15,26 @@ public class JournalEntryController {
     @Autowired
     private JournalEntryRepository journalEntryRepository;
 
-    @GetMapping("addEntry")
+    @GetMapping("/entries/addEntry")
     public String displayJournalEntryForm(Model model){
         model.addAttribute("title", "Daily Entry");
-        return "addEntry";
+        return "/entries/addEntry";
     }
 
-    @PostMapping("allEntries")
+    @PostMapping("/entries/allEntries")
     public String processJournalEntry(@RequestParam String dailyWaterLog,@RequestParam String mood, @RequestParam String detailedEntry){
         journalEntryRepository.save(new JournalEntry(dailyWaterLog, mood, detailedEntry));
-        return "redirect:allEntries";
+        return "redirect:/entries/allEntries";
     }
 
-    @GetMapping("delete")
+    @GetMapping("/entries/delete")
     public String deleteEventForm(Model model){
         model.addAttribute("delete", "Delete Events");
         model.addAttribute("entries", journalEntryRepository.findAll());
-        return "delete";
+        return "/entries/delete";
     }
 
-    @PostMapping("delete")
+    @PostMapping("/entries/delete")
     public String deleteEvents(@RequestParam(required = false) int[] entryIds){
 
         if(entryIds != null){
@@ -42,7 +42,7 @@ public class JournalEntryController {
                 journalEntryRepository.deleteById(id);
             }
         }
-        return "redirect:allEntries";
+        return "redirect:/entries/allEntries";
     }
 
 }

@@ -8,26 +8,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
-import java.util.Optional;
 
 @Controller
 public class ProfileController {
     @Autowired
     private ProfileRepository profileRepository;
 
-//    @Autowired
-//    private Profile profile;
-
-    @GetMapping("profile")
+    @GetMapping("/profile/user-profile")
     public String displayProfileForm(Model model){
         model.addAttribute("title", "Profile");
-        return "profile";
+        return "/profile/user-profile";
     }
 
-    @PostMapping("profile-view")
+    @PostMapping("/profile/profile-view")
     public String processProfileEntry(@ModelAttribute @Valid Profile newProfile, Model model){
         Profile profile = profileRepository.findById(newProfile.getId()).orElse(new Profile());
         profile.setName(newProfile.getName());
@@ -36,13 +31,13 @@ public class ProfileController {
         profile.setEmotionalGoals(newProfile.getEmotionalGoals());
 
         profileRepository.save(newProfile);
-        return "redirect:profile-view";
+        return "redirect:/profile/profile-view";
     }
 
-    @GetMapping("profile-view")
+    @GetMapping("/profile/profile-view")
     public String displayEntryDetails(Model model){
 
         model.addAttribute("profileDetails", profileRepository.findAll());
-        return "profile-view";
+        return "/profile/profile-view";
     }
 }
