@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:fragment="head">
     <meta charset="UTF-8"/>
-    <title>Coding Events</title>
+    <title>Feel</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" th:href="@{/styles.css}">
@@ -15,7 +15,7 @@
         <li class="nav-item-1"><a class="nav-link" href="/"> Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/entries/allEntries">All Entries</a></li>
         <li class="nav-item"><a class="nav-link" href="/entries/addEntry">Add Entry</a></li>
-        <li class="nav-item"><a class="nav-link" href="/entries/logout">Log out</a></li>
+        <li class="nav-item"><a class="nav-link" href="/logout">Log out</a></li>
     </ul>
 </nav>
 <h2 th:fragment = "title" th:text="${title}"></h2>

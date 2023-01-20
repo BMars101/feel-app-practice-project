@@ -9,7 +9,7 @@ body, html {
     background: #f5f5f5;
 }
 nav{
-    margin: 30px;
+    margin-top: 50px;
     width: 100%;
 }
 ul{
@@ -20,9 +20,13 @@ ul{
     text-decoration: none;
     color: white;
 }
+.entry-form, .greeting-container, .entries-table {
+    padding-top: 70px;
+}
 .footer-link{
     color: white;
 }
+
 .nav-item{
     padding-right: 20px;
 }

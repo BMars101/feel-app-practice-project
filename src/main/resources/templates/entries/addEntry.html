@@ -4,6 +4,7 @@
 </head>
 <body class="container">
 <nav th:replace="fragments :: navigation"></nav>
+<div class="entry-form">
 <h2 th:replace="fragments :: title"></h2>
 <form class="form-horizontal" method="post" action="/entries/allEntries">
     <label>Enter water intake for today: </label>
@@ -14,7 +15,7 @@
     <textarea class="form-control" name="detailedEntry"></textarea>
     <input type="submit" value="Add Entry">
 </form>
-
+</div>
 </body>
 <footer th:replace="fragments :: footer"></footer>
 </html>

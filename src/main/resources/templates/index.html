@@ -4,8 +4,9 @@
 <body class="container">
 <nav th:replace="fragments :: navigation"></nav>
 <h2 th:replace="fragments :: title"></h2>
-<h2 th:text="${username}"></h2>
-
+<div class="greeting-container">
+    <h2 th:text="${username}"></h2>
+</div>
 </body>
 <footer th:replace="fragments :: footer"></footer>
 </html>
