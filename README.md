@@ -1,7 +1,7 @@
 # feel-app-practice-project
 # The Feel App
 ## Assignment Description
-This project is based off of a group project that was created in LaunchCode's LiftOff project. The idea an general functionality came from 
+This project is based off of a group project that was created in LaunchCode's LiftOff project. The idea came from 
 a group brainstorming session. After the program completed, I wanted to take the opportunity to implement different features such as utilizing 
 the DateTime object in Java to track entries.
 [Project Outline Assignment](https://education.launchcode.org/liftoff/modules/assignments/project-outline)
