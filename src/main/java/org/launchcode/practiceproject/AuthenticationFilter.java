@@ -4,15 +4,12 @@ import org.launchcode.practiceproject.controllers.AuthenticationController;
 import org.launchcode.practiceproject.data.UserRepository;
 import org.launchcode.practiceproject.models.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.security.Principal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,7 +21,7 @@ public class AuthenticationFilter extends HandlerInterceptorAdapter {
     @Autowired
     private AuthenticationController authenticationController;
 
-    private static final List<String> whitelist = Arrays.asList("/water-needs-teaser", "/check-needs", "/login", "/register", "/logout", "/css", "/static/styles", "/img/water-drop-image", "/about", "/contact","/profile");
+    private static final List<String> whitelist = Arrays.asList("/water-needs-teaser", "/check-needs", "/login", "/register", "/logout", "/css", "/static/styles", "/img/water-drop-image", "/about", "/contact","/profile", "/fragments");
 
 
     private static boolean isWhitelisted(String path){

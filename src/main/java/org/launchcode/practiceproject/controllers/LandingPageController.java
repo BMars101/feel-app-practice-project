@@ -17,7 +17,7 @@ public class LandingPageController {
     @GetMapping("water-needs-teaser")
     public String displayWaterNeeds(Model model){
         model.addAttribute("waterNeeds", waterNeeds.getWaterNeeds());
-        return "water-needs-teaser";
+        return "water-needs-result";
     }
 
     @PostMapping("water-needs-teaser")

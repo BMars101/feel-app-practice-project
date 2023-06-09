@@ -16,12 +16,20 @@ ul{
     display: inline-flex;
     float: right;
 }
+.back-button {
+    text-decoration: none;
+    color: black;
+}
 .btn-danger {
     text-decoration: none;
     color: white;
 }
 .entry-form, .greeting-container, .entries-table {
     padding-top: 70px;
+}
+.footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 .footer-link{
     color: white;
