@@ -9,14 +9,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav th:fragment = "navigation" class="navbar navbar-light">
-    <h1>Feel</h1>
-    <ul>
-        <li class="nav-item-1"><a class="nav-link" href="/"> Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/entries/allEntries">All Entries</a></li>
-        <li class="nav-item"><a class="nav-link" href="/entries/addEntry">Add Entry</a></li>
-        <li class="nav-item"><a class="nav-link" href="/logout">Log out</a></li>
-    </ul>
+<nav th:fragment = "navigation" class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <h1 class="navbar-brand" href="#">Feel</h1>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+                class="collapse navbar-collapse d-flex justify-content-end"
+                id="navbarNav"
+        >
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/entries/addEntry">Add Entry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/entries/allEntries">All Entries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log out</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
 </nav>
 <h2 th:fragment = "title" th:text="${title}"></h2>
 
