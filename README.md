@@ -37,4 +37,12 @@ How to manage authentication and authorization for an app that has features befo
 # To Test The Project
 ### Requirements
 * JDK Version 11
-* IntelliJ IDE
+* IntelliJ IDEA CE
+*  MySQL running
+### Instructions
+* Ensure MySQL is running
+* Open IntelliJ - If a project is open, select File and Close Project
+* Select Get From VCS and copy this repository's URL, past in URL field in IntelliJ and select Clone
+* The project should open and run build
+* Select Gradle on the left
+* Open Tasks > application > bootRun
