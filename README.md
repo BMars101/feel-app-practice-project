@@ -46,3 +46,4 @@ How to manage authentication and authorization for an app that has features befo
 * The project should open and run build
 * Select Gradle on the left
 * Open Tasks > application > bootRun
+* Navigate to localhost:8080 in browser
