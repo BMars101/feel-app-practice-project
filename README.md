@@ -1,7 +1,7 @@
 # feel-app-practice-project
 # The Feel App
 ## Assignment Description
-This project is based off of a group project that was created in LaunchCode's LiftOff project. The idea came from 
+This project is based off of a group project that was created in LaunchCode's LiftOff program. The idea came from 
 a group brainstorming session. After the program completed, I wanted to take the opportunity to implement different features such as utilizing 
 the DateTime object in Java to track entries.
 [Project Outline Assignment](https://education.launchcode.org/liftoff/modules/assignments/project-outline)
@@ -29,4 +29,8 @@ Users will be able to:
  * MySQL
  * Hibernate
 ### What I'll Have to Learn
-Use Java Date class and render a calendar in the web app. Implement tracking. 
+How to manage authentication and authorization for an app that has features before signing in a after signing in. How to use the DateTime Java object. 
+###Ideas for improvement
+* Send user notifications when not loggin water consumption regularly
+* Implement Spring Security
+* Improve general layout
