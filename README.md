@@ -30,7 +30,11 @@ Users will be able to:
  * Hibernate
 ### What I'll Have to Learn
 How to manage authentication and authorization for an app that has features before signing in a after signing in. How to use the LocalDate Java object. 
-###Ideas for improvement
+### Ideas for improvement
 * Send user notifications when not loggin water consumption regularly
 * Implement Spring Security
 * Improve general layout
+# To Test The Project
+### Requirements
+* JDK Version 11
+* IntelliJ IDE
