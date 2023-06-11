@@ -3,7 +3,7 @@
 ## Assignment Description
 This project is based off of a group project that was created in LaunchCode's LiftOff program. The idea came from 
 a group brainstorming session. After the program completed, I wanted to take the opportunity to implement different features such as utilizing 
-the DateTime object in Java to track entries.
+the LocalDate object in Java to track entries.
 [Project Outline Assignment](https://education.launchcode.org/liftoff/modules/assignments/project-outline)
 
 ### Overview
@@ -29,7 +29,7 @@ Users will be able to:
  * MySQL
  * Hibernate
 ### What I'll Have to Learn
-How to manage authentication and authorization for an app that has features before signing in a after signing in. How to use the DateTime Java object. 
+How to manage authentication and authorization for an app that has features before signing in a after signing in. How to use the LocalDate Java object. 
 ###Ideas for improvement
 * Send user notifications when not loggin water consumption regularly
 * Implement Spring Security
