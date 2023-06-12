@@ -27,13 +27,14 @@
       }
       .feel-description {
         font-size: large;
+
       }
       .link {
-        color: #54b4d3;
+        color: #448ec1;
       }
       .logo {
         font-weight: bold;
-        color: #54b4d3;
+        color: #448ec1;
         font-size: larger;
       }
       .navbar {
@@ -41,13 +42,27 @@
       }
       .water-display {
         border-radius: 10%;
-        padding-top: 70px;
         margin-left: 200px;
-        height: 225px;
-        width: 325px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        height: 250px;
+        width: 350px;
+        background-color: #2b7fb7;
+        color: #f5f5f5;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
       }
+      footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        background-color: #0e2132;
+        justify-content: space-around;
+        color: white;
+        padding-top: 30px;
+}
+    .footer-link {
+        color: #f5f5f5;
+        }
     </style>
     </head>
 <body>
@@ -116,7 +131,7 @@
     </div>
     <div class="col">
         <div class="row row-cols-1 row-cols-sm-2 g-4">
-            <div class="col water-display d-flex gap-2">
+            <div class="col water-display d-flex align-items-center gap-2">
                 <div>
                     <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +152,7 @@
                     </svg>
                 </div>
                 <h4
-                        class="fw-semibold mb-0 text-body-emphasis"
+                        class="fw-semibold mb-0 text-body-emphasis lh-lg"
                         th:text="${waterNeeds}"
                 ></h4>
             </div>
@@ -145,4 +160,17 @@
     </div>
 </div>
 </body>
+<footer th:fragment = "footer" class="footer">
+    <div class="footer-item">
+        <h5>Contact</h5>
+        <a class="footer-link" href="https://www.linkedin.com/in/beth-marshall-philadelphia/">LinkedIn</a>
+        <p class="footer-link">bethmarsh1018@gmail.com</p>
+    </div>
+    <div class="footer-item">
+        <h5><a class="footer-link" href="/links/about">About Us</a></h5>
+    </div>
+    <div class="footer-item">
+        <h5><a class="footer-link" href="/links/resources">Resources</a></h5>
+    </div>
+</footer>
 </html>

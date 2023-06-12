@@ -20,7 +20,11 @@
     <style>
       * {
         font-family: "Montserrat", sans-serif;
+        }
+    .navbar {
+        padding: 40px;
       }
+
       .background-image {
         height: 100vh;
         width: 100%;
@@ -28,6 +32,7 @@
       }
       .navbar,
       .form {
+        color: #414141;
         position: relative;
       }
 
@@ -40,6 +45,25 @@
         width: 400px;
         margin-left: 120px;
       }
+    .logo {
+        font-weight: bold;
+        color:#1b4469;
+        font-size: larger;
+      }
+
+      footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+}
+    .footer-link {
+        color: #f5f5f5;
+        }
+
 
     </style>
     <title>Feel</title>
@@ -48,7 +72,7 @@
 <image class="background-image" th:src="@{/img/water-drop-image.jpg}">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <h1 class="navbar-brand" href="#">Welcome to Feel</h1>
+            <h1 class="display-6" href="#">Welcome to <span class="logo">Feel</span></h1>
             <button
                     class="navbar-toggler"
                     type="button"
@@ -105,4 +129,17 @@
     </div>
 </image>
 </body>
+<footer th:fragment = "footer" class="footer">
+    <div class="footer-item">
+        <h5>Contact</h5>
+        <a class="footer-link" href="https://www.linkedin.com/in/beth-marshall-philadelphia/">LinkedIn</a>
+        <p class="footer-link">bethmarsh1018@gmail.com</p>
+    </div>
+    <div class="footer-item">
+        <h5><a class="footer-link" href="/links/about">About Us</a></h5>
+    </div>
+    <div class="footer-item">
+        <h5><a class="footer-link" href="/links/resources">Resources</a></h5>
+    </div>
+</footer>
 </html>
