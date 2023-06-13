@@ -12,29 +12,34 @@
             background: #f5f5f5;
             }
         .main-container {
-            margin-top: 30px;
+
             display: flex;
             justify-content: space-around;
             align-items: center;
             }
+        .quote-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            width: 400px;
+            }
         q {
-            font-size: x-large;
+            font-size: xx-large;
             text-align: center;
            }
 
-        .login-container {
-            padding: 20px;
-            }
-        footer {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        background-color: #0e2132;
-        justify-content: space-around;
-        color: white;
-        padding-top: 30px;
+          footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background: #3785B9;
+    padding: 40px;
+    color: white;
 }
     .footer-link {
         color: #f5f5f5;
@@ -45,7 +50,7 @@
         font-size: larger;
       }
       .navbar {
-        margin: 40px;
+        margin-top: 40px;
       }
     </style>
 </head>
@@ -90,24 +95,28 @@
     </div>
     <div class="login-container">
     <h3>Login to start tracking your mood</h3>
-    <form method="post" id="login-form">
-        <div class="form-group row">
-            <lable class="col-sm-2 col-form-label">Username</lable>
+    <form method="post" id="login-form" class="mt-3">
+        <div class="form-group col mb-3">
+            <lable class="col-lg-2 col-form-label-lg">Username</lable>
             <div class="col-sm-10">
-                <input type="text" id="username" class="login-username-field" placeholder="enter username" th:field="${loginFormDTO.username}">
+                <input type="text" id="username" class="form-control form-control-lg" placeholder="enter username" th:field="${loginFormDTO.username}">
             </div>
             <p class="error" th:errors="${loginFormDTO.username}"></p>
         </div>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Password</label>
+        <div class="form-group col mb-3">
+            <label class="col-lg-2 col-form-label-lg">Password</label>
             <div class="col-sm-10">
-                <input type="password" id="password" class="login-password-field" placeholder="enter password" th:field="${loginFormDTO.password}">
+                <input type="password" id="password" class="form-control form-control-lg" placeholder="enter password" th:field="${loginFormDTO.password}">
             </div>
             <p class="error" th:error="${loginFormDTO.password}"></p>
         </div>
-        <input type="submit" value="Login" id="login">
+        <div class="form-group mt-3">
+            <input type="submit" value="Login" id="login">
+        </div>
     </form>
-        <p type="button" id="sign-up">New users<a href="/register"> Register here</a></p>
+        <div class="form-group mt-3">
+            <p type="button" id="sign-up">New users<a href="/register"> Register here</a></p>
+        </div>
     </div>
 
 </div>
