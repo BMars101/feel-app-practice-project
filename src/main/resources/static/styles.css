@@ -8,11 +8,18 @@ body, html {
     margin: 0;
     background: #f5f5f5;
 }
-
-ul{
-    display: inline-flex;
-    float: right;
+.logo {
+        font-weight: bold;
+        color: #448ec1;
+        font-size: larger;
+      }
+      .navbar {
+        margin-top: 40px;
+      }
+.greeting-container {
+    margin-left: 15px;
 }
+
 .back-button {
     text-decoration: none;
     color: black;
@@ -44,14 +51,7 @@ footer {
     display: grid;
     grid-template-columns: auto auto auto;
     background: #3785B9;
-    padding: 60px;
+    padding: 40px;
     color: white;
 }
 
-.teaser-form {
-    position: absolute;
-    border: 1px solid black;
-    top: 0;
-    margin: 0; 0; auto;
-
-}
