@@ -42,8 +42,6 @@ public class AuthenticationFilter extends HandlerInterceptorAdapter {
 
 
         if(user != null){
-            System.out.println("AuthenticationFilter " + user.getUsername());
-            System.out.println("User Id " + user.getId());
             return true;
         }
 
